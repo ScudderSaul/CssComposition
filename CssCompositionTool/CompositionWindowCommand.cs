@@ -22,7 +22,8 @@ namespace CssCompositionTool
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        public static readonly Guid CommandSet = new Guid("26e5300c-bdb6-4f1c-a7a1-22ad76bbde35");
+        //  public static readonly Guid CommandSet = new Guid("26e5300c-bdb6-4f1c-a7a1-22ad76bbde35");
+        public static readonly Guid CommandSet = new Guid("11dc9500-e466-477b-a29b-66864b88cb55");
 
         /// <summary>
         /// VS Package that provides this command, not null.

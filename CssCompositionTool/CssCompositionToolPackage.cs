@@ -24,6 +24,10 @@ namespace CssCompositionTool
     /// <para>
     /// To get loaded into VS, the package must be referred by &lt;Asset Type="Microsoft.VisualStudio.VsPackage" ...&gt; in .vsixmanifest file.
     /// </para>
+    /// 
+    /// from CssCompositionTool.622820af-cde7-4775-8caa-d0af02dab678
+    /// CssCompositionTool.4c641290-13b4-4ab9-a53c-6ec9bced2398
+    /// 
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(CssCompositionToolPackage.PackageGuidString)]
@@ -34,7 +38,8 @@ namespace CssCompositionTool
         /// <summary>
         /// CssCompositionToolPackage GUID string.
         /// </summary>
-        public const string PackageGuidString = "d2a1fed1-5eb9-4143-86e3-4b7561e4b7ae";
+        //  public const string PackageGuidString = "d2a1fed1-5eb9-4143-86e3-4b7561e4b7ae";
+        public const string PackageGuidString = "ced45a17-246f-45d1-9b16-9beca68f535a";
 
         public static string ConnectionOther = string.Empty;
 

@@ -16,7 +16,8 @@ namespace CssCompositionTool
     /// implementation of the IVsUIElementPane interface.
     /// </para>
     /// </remarks>
-    [Guid("b4810978-699b-4322-a4a2-95a75fd7a76e")]
+    /// [Guid("b4810978-699b-4322-a4a2-95a75fd7a76e")]
+    [Guid("1f6a698d-c806-4be6-b184-dca8e3aac5ab")]
     public class CompositionWindow : ToolWindowPane
     {
         /// <summary>
