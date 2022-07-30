@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+  <!--  The VSCT compiler (the tool that translates this file into the binary
+        format that VisualStudio will consume) has the ability to run a preprocessor
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so
+        it is possible to define includes and macros with the same syntax used
+        in C++ files. Using this ability of the compiler here, we include some files
+        defining some of the constants that we will use inside the file. -->
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h" />
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h" />
+
+  <!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidCssCompositionToolPackage">
+    <!-- Inside this section we have different sub-sections: one for the menus, another
+    for the menu groups, one for the buttons (the actual commands), one for the combos
+    and the last one for the bitmaps used. Each element is identified by a command id that
+    is a unique pair of guid and numeric identifier; the guid part of the identifier is usually
+    called "command set" and is used to group different command inside a logically related
+    group; your package should define its own command set in order to avoid collisions
+    with command ids defined by other packages. -->
+
+    <Groups>
+      <Group guid="guidCssCompositionToolPackageCmdSet1" 
+             id="ToolMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+    </Groups>
+
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+    <Buttons>
+      <!--To define a menu group you have to specify its ID, the parent menu and its display priority.
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
+
+      <Button guid="guidCssCompositionToolPackageCmdSet1" 
+              id="cmdidToolMenuCommand" priority="0x0100" type="Button">
+        <Parent guid="guidCssCompositionToolPackageCmdSet1" id="ToolMenuGroup" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Css Composition</ButtonText>
+        </Strings>
+      </Button>
+
+      <!--<Button guid="guidCssCompositionToolPackageCmdSet1"
+              id="cmdidToolMenuCommand" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Css Composition</ButtonText>
+        </Strings>
+      </Button>-->
+
+      <Button guid="guidCssCompositionToolPackageCmdSet" 
+              id="CompositionWindowCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Css Composition</ButtonText>
+        </Strings>
+      </Button>
+
+     
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <!--  The bitmap id is defined in a way that is a little bit different from the others:
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
+            inside a button definition. An important aspect of this declaration is that the element id
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+      <Bitmap guid="guidImages" href="Resources\CompositionWindowCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages1" href="Resources\ToolMenuCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+    </Bitmaps>
+    
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+     <!-- GuidSymbol name="guidCssCompositionToolPackage" value="{d2a1fed1-5eb9-4143-86e3-4b7561e4b7ae}"  -->
+	<GuidSymbol name="guidCssCompositionToolPackage" value="{ced45a17-246f-45d1-9b16-9beca68f535a}" />
+
+
+	  <!-- This is the guid used to group the menu commands together -->
+    <!-- GuidSymbol name="guidCssCompositionToolPackageCmdSet" value="{26e5300c-bdb6-4f1c-a7a1-22ad76bbde35}" -->
+    <GuidSymbol name="guidCssCompositionToolPackageCmdSet" value="{11dc9500-e466-477b-a29b-66864b88cb55}">
+      <IDSymbol name="CompositionWindowCommandId" value="0x0100" />
+     
+    </GuidSymbol>
+
+   // <!-- GuidSymbol  name="guidCssCompositionToolPackageCmdSet1" value="{c1054f2c-e373-461e-bad1-d3384a9cdaf6}" -->
+	<GuidSymbol  name="guidCssCompositionToolPackageCmdSet1" value="{f8f3a0f9-9805-40d6-989e-f3b87820d5f8}">
+       <IDSymbol name="ToolMenuGroup" value="0x0180" />
+       <IDSymbol  name="cmdidToolMenuCommand" value="0x0101" />
+    </GuidSymbol>
+
+	  <!-- GuidSymbol name="guidImages" value="{2e9d8efd-a0cc-477a-9fca-f9f99b43ded1}" -->
+	<GuidSymbol name="guidImages" value="{e7f7b262-dd33-4b0b-9870-ecada6f371e6}">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+
+
+	<!--GuidSymbol value="{bf2b4203-ea70-4aaf-a174-07d82b3e0d34}" name="guidImages1" -->
+    <GuidSymbol value="{d2cc1653-4f2d-4564-80d2-a3742a2c8dca}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

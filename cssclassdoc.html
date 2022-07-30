@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <p>Compose Css3 Classes and Animations</p>
+    <style>
+        <!--
+        .BoostSeen {
+            font-size: 90%;
+            font-weight: bolder;
+            font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+            color: rgba(70,130,180,255.00);
+        }
+
+        .FirstVersionStyle {
+            border-width: 2px;
+            border-radius: 6px;
+            border-style: groove;
+            border-color: rgba(173,255,47,255.00);
+            width: 400px;
+            list-style-type: square;
+            font-size: 60%;
+            font-weight: 600;
+            font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+            opacity: 90;
+            color: rgba(105,134,105,255.00);
+            background-color: rgba(211,248,211,255.00);
+        }
+
+        .MarginList {
+            margin: 4px;
+        }
+
+        .WrapAnimation38446 {
+            animation: Animation38446;
+            animation-duration: 4000ms;
+            animation-delay: 0ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes Animation38446 {
+            0% {
+                background: linear-gradient(-54.22deg, rgba(95,158,160,255.00) 0.0%, rgba(218,165,32,255.00) 55.16%);
+                left: 200px;
+                height: 100px;
+                width: 600px;
+            }
+
+            100% {
+                background: linear-gradient(63.03deg, rgba(100,149,237,255.00) 0.0%, rgba(139,0,139,255.00) 39.34%);
+                left: 200px;
+                height: 100px;
+                width: 100px;
+            }
+        }
+
+        .WrapAnimation91424 {
+            animation: Animation91424;
+            animation-duration: 15000ms;
+            animation-delay: 0ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes Animation91424 {
+            0% {
+                font-size: 90%;
+                font-weight: normal;
+                height: 100px;
+                width: 100px;
+                margin: 5px;
+                border-color: rgba(0,0,0,255.00);
+                border-width: 4px;
+                border-style: ridge;
+                border-radius: 6px;
+                left: 100px;
+                transform-origin: 50% 50%;
+                border-style: groove;
+                transform: scaleX(1.10) scaleY(1.10) rotateZ(5deg);
+            }
+
+            100% {
+                color: rgba(0,139,139,255.00);
+                font-size: 80%;
+                height: 50px;
+                width: 50px;
+                margin: 10px;
+                border-color: rgba(100,100,100,255.00);
+                border-width: 6px;
+                border-style: ridge;
+                border-radius: 9px;
+                left: 300px;
+                transform-origin: 50% 50%;
+                border-style: ridge;
+                transform: rotateZ(90deg) scaleX(.90) scaleY(.90);
+            }
+        }
+        -->
+    </style>
+    <div class="FirstVersionStyle">
+        <p>
+            Cautions:p>
+        <ul class="MarginList">
+
+            <li>
+                The SQL database created by Visual Studio 2017 during installation is used. 
+                <div class="BoostSeen">*Other SQL databases may be used instead of localdb by setting the value of the registry key 'HKEY_CURRENT_USER\SOFTWARE\_ZEN_SOFT\CssScriptClassesExt' to a connection string for another database where permission exists. **I have only tested with other databases on my local machine. (The connection string I used is shown in the image at the bottom of this page )</div>
+            </li>
+            <li>The first time the extension starts it creates a data base for Css3 components in classes, please wait until it is done before using it. When the settings box appears it is done. </li>
+            <li>Sometimes the script displayed does not update, press the 'Build Style' button to update the window. </li>
+            <li>If all of the extension tools do not show in the window when the first time it is run, close the extension window and restart using the Tool menu entry for Css_Classes </li>
+            <li>Please let me know of bugs. </li>
+        </ul>
+        <p>Recent changes</p>
+        <ul>
+            <li>This is the first version for Visual studio 2019 </li>
+           
+            
+        </ul>
+    </div>
+    <div>
+        <p>The Css Script Classes Extension for Visual Studio enables composing Css Classes and animation key frames by selecting their components and it saves the components in the (localdb) database created when visual studio 2015 is installed  so that users have copies to be used or re-edited as needed.</p>
+        <img src="http://dragonsawaken.net/csstooldocs/StartUp1.PNG" alt="" width="600" />
+        <p>The tool enables selection of components in Css3 classes and Animation Key Frames, It allows selection of colors in gradients</p>
+        <img src="http://dragonsawaken.net/csstooldocs/ColorsandScales1.PNG" alt="" width="600" />
+        <p>Selection is done from expanding controls in the settings box</p>
+        <img src="http://dragonsawaken.net/csstooldocs/Expanders1.PNG" alt="" width="600" />
+        <p>Css3 style classes may be renamed in the tool</p>
+        <img src="http://dragonsawaken.net/csstooldocs/RenameStyle1.PNG" alt="" width="600" />
+        <p>Pressing the 'copy' button creates a copy</p>
+        <img src="http://dragonsawaken.net/csstooldocs/CopuButtonUse1.PNG" alt="" width="600" />
+        <p>When you have a lot of Css3 classes, the 'Choose Style button is useful.</p>
+        <img src="http://dragonsawaken.net/csstooldocs/ChooseStyle1.PNG" alt="" width="600" />
+        <p>Pressing 'Compose/View Animation brings up the page where animation key frames are edited</p>
+        <img src="http://dragonsawaken.net/csstooldocs/AnimationPage1.PNG" alt="" width="600" />
+        <p>Animation may be mixed into styles by selecting a set of key frames by name</p>
+        <img src="http://dragonsawaken.net/csstooldocs/MixInAnimations1.PNG" alt="" width="600" />
+        <div class="BoostSeen">
+            <p>Setting a registry value allows using a different SQL database</p>
+            <img src="http://dragonsawaken.net/csstooldocs/RegistryDb.PNG" alt="" width="600" />
+        </div>
+    </div>
+    <div class="WrapAnimation91424">
+        <p>Thank you for using this extension.</p>
+    </div>
+</body>
+</html>
