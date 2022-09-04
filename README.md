@@ -1,7 +1,7 @@
 # CssComposition
 Css Composition vsix extension for Visual Studio 2022
 
-The CssCompositrion extension for visual studio enables composing Css Classes and animation key frames by 
+The CssCompositrion extension for Visual Studio enables composing Css Classes and animation key frames by 
 selecting their components and saves the components and classes 
 in the (localdb) database created when Visual Studio 2022 is installed.
 
